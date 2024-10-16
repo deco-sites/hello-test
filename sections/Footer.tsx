@@ -3,7 +3,6 @@ import Image from "apps/website/components/Image.tsx";
 
 interface Props {
   href?: string;
-  image?: ImageWidget;
   alt?: string;
   width?: number;
   height?: number;
@@ -11,8 +10,6 @@ interface Props {
 }
 
 function Footer({
-  image =
-    "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4959/d7aa9290-074f-417c-99c3-5b0587c8c2ee",
   href = "http://bohradevelopers.com/",
   text = "Developed By Bohradevelopers",
   alt = "Developed By Bohradevelopers",
@@ -27,14 +24,6 @@ function Footer({
         target="_blank"
       >
         {text && <p>{text}</p>}
-        {image && (
-          <Image
-            src={image || ""}
-            alt={alt || ""}
-            height={height || 20}
-            width={width || 50}
-          />
-        )}
       </a>
     </div>
   );
